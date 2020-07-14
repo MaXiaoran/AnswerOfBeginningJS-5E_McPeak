@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lag="en">
+<head>
+  <title>ch04_q2</title>
+</head>
+  
+<body>
+  <script>
+    function writeTimesTable (x, start, end) {
+      for (; start <= end; start++) {
+        document.write(x + " * " + start + " = " +
+          start * x + "<br />");
+      }
+    }
+
+    var x;
+
+    while ((x = prompt("Enter x ", -1)) != -1) {
+      while (isNaN(x) == true) {
+        x = prompt(x + "is not a valid number, please retry", -1);
+      }
+
+      if (x ==  -1) {
+      break;
+      }
+
+      document.write("<br />The " + x + " times table<br />");
+      writeTimesTable(x,1,12);
+    }
+
+
+  </script>
+</body>
+
+</html>
